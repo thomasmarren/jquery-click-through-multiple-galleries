@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-image: url(/img/woodback2.jpg);
+}
+
+p a{
+  color: forestgreen;
+}
+
+p a:hover {
+  color: tan;
+}
+
+/************************
+WRAPPER
+************************/
+
+.wrapper {
+  width: 80%;
+  height: 100%;
+  min-height: 500px;
+  margin: 12px auto 0px;
+  padding: 50px 5% 5% 5%;
+  background-color: white;
+  -moz-box-shadow: -10px -10px 10px #fff , -moz-box-shadow: 10px -10px 10px #fff;
+  -webkit-box-shadow: -10px -10px 10px #fff , 10px -10px 10px #fff;
+  box-shadow: -10px -10px 10px #fff , 10px -10px 10px #fff;
+}
+
+h3 {
+  margin-top: 15px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8em;
+  color: rgb(22,70,19);
+}
+
+h4 {
+  margin-bottom: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  color: rgb(22,70,19);
+}
+
+h5 {
+  margin-bottom: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  color: rgb(22,70,19);
+}
+
+.wrapper p {
+  margin: 4px 0px 8px;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: 'Lato' , sans-serif;
+}
+
+/***************************
+GALLERY 
+***************************/
+#galleryNav {
+  text-align: center;
+  margin: 40px 0px;
+}
+
+#galleryNav ul {
+  list-style: none;
+}
+
+#galleryNav li {
+  display: inline-block;
+  margin: 0px 25px;
+  padding: 5px 5px 0px 5px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+}
+
+#galleryNav a {
+  text-decoration: none;
+  color: rgb(22,100,19);
+  border-bottom: 1px solid green;
+}
+
+#galleryNav a:hover {
+  color: tan;
+  border-bottom: 1px solid tan;
+}
+
+.thumbnails {
+  width: 47%;
+}
+
+.mainPhoto {
+  float: left;
+  width: 50%;
+  display: inline;
+}
+
+.mainPhoto img {
+  width: 90%;
+  min-width: 280px;
+}
+
+.thumbnails ul {
+  list-style: none;
+  margin: 60px 0 -5px 4px;
+}
+
+.thumbnails li {
+  display: inline-block;
+  margin: -4px;
+}
+
+.thumbnails img {
+  display: inline;
+  border: 3px solid black;
+}
+
+$image {
+  display: none;
+}
+
+.descriptions{
+  float: clear;
+  margin-top: 30px;
+  height: 100%;
+  min-height: 400px;
+}
+
+
+#galleryDescription {
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 20px 0px;
+  text-align: center;
+}
+
+/***************************
+MEDIA QUERIES
+***************************/
+@-ms-viewport {
+  zoom:1.0;
+  width: extend-to-zoom;
+}
+
+
+/******************* 
+1000 px
+*******************/
+@media (max-width: 1000px) {
+  
+  
+body {
+  margin: 0;
+  padding: 0;
+  background-color: tan;
+}
+
+.selected a {
+    color: white;
+    background: transparent;
+    border-bottom: 2px solid green;
+}  
+  
+.wrapper {
+  margin: 0;
+  padding: 30px;
+width: auto;
+height: 100%;
+min-height: 320px;
+box-shadow: 0px 3px 15px rgb(105,46,0), 0px -1px 2px rgb(105,46,0);
+-moz-box-shadow: 0px 3px 15px rgb(105,46,0), 0px -1px 2px rgb(105,46,0);
+-webkit-box-shadow: 0px 3px 15px rgb(105,46,0), 0px -1px 2px rgb(105,46,0);
+}
+
+.thumbnails li {
+  margin-top: -6px;
+}  
+  
+#galleryNav{
+  font-size: .7em;
+  margin-top: -10px;
+}
+  
+#galleryNav li{
+  display: inline-block;
+  margin: 5px;
+} 
+  
+.thumbnails{
+  margin-top: -30px;
+  width: 100%;
+  text-align: center;
+}
+  
+.mainPhoto {
+width: 100%;
+float: none;
+}  
+}
