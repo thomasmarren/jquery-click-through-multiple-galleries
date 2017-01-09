@@ -1,11 +1,11 @@
+removeDescriptions();
+$("#description-one").show();
+
 function removeDescriptions(){
   $("#description-one").hide();
   $("#description-two").hide();
   $("#description-three").hide();
 };
-
-removeDescriptions();
-$("#description-one").show();
 
 var $image = $("<img>").appendTo(".mainPhoto");
 $(".thumbnails a").click(function (event) {
