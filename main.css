@@ -121,6 +121,10 @@ GALLERY
   border: 3px solid black;
 }
 
+.thumbnails img:hover {
+  opacity: 0.8;
+}
+
 $image {
   display: none;
 }
