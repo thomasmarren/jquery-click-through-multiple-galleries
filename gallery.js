@@ -1,18 +1,13 @@
-var categories = $(".category")
-var $image = $("<img>").appendTo(".mainPhoto");
-
-function remove(){
-  $("#description1").hide();
-  $("#description2").hide();
-  $("#description3").hide();
+function removeDescriptions(){
+  $("#description-one").hide();
+  $("#description-two").hide();
+  $("#description-three").hide();
 };
 
-//Remove all descriptions except Description 1 on initial page load
-remove();
-$("#description1").show();
+removeDescriptions();
+$("#description-one").show();
 
-
-//Load image into mainPhoto when thumbnail is clicked
+var $image = $("<img>").appendTo(".mainPhoto");
 $(".thumbnails a").click(function (event) {
   event.preventDefault();
   var imageLocation = $(this).attr("href");
@@ -20,12 +15,12 @@ $(".thumbnails a").click(function (event) {
   $(".mainPhoto img").css("border","15px black solid");
 });
 
-
-//Change galleries
 $("#galleryNav a")
   .click(function(){
   var which = $(this).data("val");
-  categories.hide();
+  $(".category").hide();
+  removeDescriptions()
+  $("#description-" + which).show()
   $('#' + which)
     .show()
     .find(".thumbnails a:first")
@@ -34,23 +29,7 @@ $("#galleryNav a")
 .eq(0)
   .click();
 
-
-//Gallery Descriptions
-$("#galleryOne").click(function(){
-  remove();
-  $("#description1").show();
-});
-$("#galleryTwo").click(function(){
-  remove();
-  $("#description2").show();
-});
-$("#galleryThree").click(function(){
-  remove();
-  $("#description3").show();
-});
-
-
-if ($(window).width() > 1000 ) {   
+if ($(window).width() > 1000 ) {
       $('.thumbnails a').mouseover(function(){
       $(this).css("opacity",".8")
       });
